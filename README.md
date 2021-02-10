@@ -1,2 +1,2 @@
-# Scrum-Board
-Angular & Symfony Scrum-Board
+# Project Bolierplate
+Frontend / Backend with Docker
