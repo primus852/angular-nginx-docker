@@ -18,6 +18,9 @@ RUN docker-php-ext-enable apcu
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer --version
 
+# Increase Memory Limit
+RUN echo 'memory_limit = 2G' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini;
+
 WORKDIR /usr/src/app
 
 COPY --chown=1000:1000 apps/backend /usr/src/app
